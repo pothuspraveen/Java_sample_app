@@ -1,11 +1,11 @@
 pipeline {
     agent any
     stages {
-        stage('Build') {
-            steps {
-                sh 'echo "Hello World"'
-                sh 'echo "Hello World1"'
-            }
+        stage('clone') {
+    git 'https://github.com/SnehaKailasa/Java_sample_app.git'
+    }
+    stage('build'){
+        sh 'mvn -f SpringMVCSecurityXML/pom.xml clean install '
         }
     }
 }
