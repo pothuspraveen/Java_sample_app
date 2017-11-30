@@ -1,11 +1,12 @@
-pipeline {
-    agent any
-   
-        stage('clone') {
-    git 'https://github.com/SnehaKailasa/Java_sample_app.git'
+node{
+
+
+	stage ('git'){checkout scm}
+    stage('clone')
+    {
+         git 'https://github.com/SnehaKailasa/Java_sample_app.git'
     }
-    stage('build'){
-        sh 'mvn -f SpringMVCSecurityXML/pom.xml clean install '
-        }
-    
+	stage ('Build') {
+		sh 'mvn -f SpringMVCSecurityXML/pom.xml clean install '
+	}
 }
