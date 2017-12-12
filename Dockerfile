@@ -1,3 +1,3 @@
 from ubuntu
-Arg var
-run echo $var
+Arg var1
+run echo "$var1"
