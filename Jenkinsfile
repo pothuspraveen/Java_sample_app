@@ -1,7 +1,7 @@
 node{
 	stage ('git'){checkout scm}
    	stage ('Build') {
-		def temp = "h/PR-"
+		def temp = "${JOB_NAME}"
 		def iend = temp.indexOf("/");
 		def temp2 = temp.substring(0 , iend)+"_"+"${BRANCH_NAME}"
 		if(temp.contains('PR-'))
