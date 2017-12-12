@@ -2,5 +2,7 @@ version: "3"
   services: 
     test:
       build: .
-        args: 
-          - var1=${var}
+        context: .
+        dockerfile: Dockerfile
+        args:
+          - Var1=${var}
