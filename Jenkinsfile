@@ -14,7 +14,7 @@ node{
 			
 			 temp2 = temp.replace('/','-')
 		 def iend = temp2.indexOf("-");
-		 temp2 = temp2.substring(0 , iend)+${BRANCH_NAME}+"PR";
+		 temp2 = temp2.substring(0 , iend)+ "${BRANCH_NAME}" +"PR";
 		  println temp2;
 		}
 		
