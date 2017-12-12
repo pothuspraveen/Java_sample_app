@@ -1,8 +1,8 @@
 version: "3"
 services:
-    test:
-      build: .
-        context: .
-        dockerfile: Dockerfile
-        args:
-          - Var1=${var}
+  test:
+    build: .
+      context: .
+      dockerfile: Dockerfile
+      args:
+        - Var1=${var}
