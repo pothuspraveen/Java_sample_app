@@ -9,6 +9,7 @@ node{
 			temp2 = temp2+"_"+"PR"
 		}
 		println temp2
+		println temp
 		/*if(!temp.contains('PR-'))
 		{
 			temp2 = temp.replaceAll('/','-')
