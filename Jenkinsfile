@@ -1,7 +1,7 @@
 node{
 	stage ('git'){checkout scm}
    	stage ('Build') {
-		def temp = "h/i"
+		def temp = "h/PR-"
 		def temp2
 		
 		if(temp.contains('PR-'))
