@@ -3,4 +3,4 @@ version: "3"
     test:
       build: .
       args: 
-        var: ${var}
+        var1: ${var}
