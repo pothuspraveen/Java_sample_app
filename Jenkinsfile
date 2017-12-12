@@ -1,15 +1,16 @@
 node{
 	stage ('git'){checkout scm}
    	stage ('Build') {
-		def temp = "${JOB_NAME}"
-		def iend = temp.indexOf("/");
-		def temp2 = temp.substring(0 , iend)+"_"+"${BRANCH_NAME}"
-		if(temp.contains('PR-'))
+		def JobName = "${JOB_NAME}"
+		def index = JobName.indexOf("/");
+		def SonarHostName = JobName.substring(0 , index)+"_"+"${BRANCH_NAME}"
+		def LockVar = SonarHostName
+		if(JobName.contains('PR-'))
 		{
-			temp2 = temp2+"_"+"PR"
+			SonarHostName = SonarHostName+"_"+"PR"
 		}
-		println temp2
-		println temp
+		println SonarHostName
+		println JobName
 		/*if(!temp.contains('PR-'))
 		{
 			temp2 = temp.replaceAll('/','-')
