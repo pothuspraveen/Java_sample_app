@@ -3,7 +3,7 @@ node{
    	stage ('Build') {
 		def temp = "h/PR-"
 		def iend = temp.indexOf("/");
-		def temp2 = temp2.substring(0 , iend)+"-"+"${BRANCH_NAME}"
+		def temp2 = temp.substring(0 , iend)+"-"+"${BRANCH_NAME}"
 		if(temp.contains('PR-'))
 		{
 			temp2 = temp2+"PR"
