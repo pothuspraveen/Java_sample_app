@@ -2,5 +2,5 @@ version: "3"
   services: 
     test:
       build: .
-      args: 
-        - var1=${var}
+        args: 
+          - var1=${var}
