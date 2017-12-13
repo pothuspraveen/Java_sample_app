@@ -1,3 +1,5 @@
+import system.pullRequest.sourceBranch
+import system.pullRequest.targetBranch
 node{
 	stage ('git'){checkout scm}
    	stage ('Build') {
@@ -6,6 +8,7 @@ node{
 		def SonarHostName = JobName.substring(0 , index)+"_"+"${BRANCH_NAME}"
 		///Println "${PULL_REQUEST}"
 		echo sh(returnStdout: true, script: 'git branch --contains')
+		println ${SYSTEM_PULLREQUEST_SOURCEBRANCH}
 		def LockVar = SonarHostName
 		if(JobName.contains('PR-'))
 		{
