@@ -1,5 +1,5 @@
-import system.pullRequest.sourceBranch
-import system.pullRequest.targetBranch
+//import system.pullRequest.sourceBranch
+//import system.pullRequest.targetBranch
 node{
 	stage ('git'){checkout scm}
    	stage ('Build') {
