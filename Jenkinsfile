@@ -27,6 +27,7 @@ node{
 		  println temp2;
 		}*/
 		
+		
 		sh '''var=${BRANCH_NAME} docker-compose up -d
 			'''
 	}
