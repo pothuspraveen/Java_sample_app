@@ -9,11 +9,18 @@ node{
 		//Println "${PULL_REQUEST}"
 		//echo sh(returnStdout: true, script: 'git branch --contains')
 		println "${env.ghprbSourceBranch}"
-		sh '''
+		def content = readFile './.env'
+  			Properties properties = new Properties()
+  			InputStream contents = new ByteArrayInputStream(content.getBytes());
+  			properties.load(contents)
+  			contents = null
+			def branch_name = properties.branch_name
+			println "${branch_name}"
+		/* sh '''
     			git rev-parse --abbrev-ref HEAD > GIT_BRANCH'
     			git_branch = readFile("GIT_BRANCH").trim()
     			echo git_branch
-   		  '''
+   		  ''' */
 		def LockVar = SonarHostName
 		if(JobName.contains('PR-'))
 		{
