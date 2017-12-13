@@ -13,7 +13,7 @@ node{
   			InputStream contents = new ByteArrayInputStream(content.getBytes());
   			properties.load(contents)
   			contents = null
-			def branch_name = properties.branch_name
+			def branch_name1 = properties.branch_name
 			println "${branch_name1}"
 		/* sh '''
     			git rev-parse --abbrev-ref HEAD > GIT_BRANCH'
