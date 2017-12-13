@@ -4,7 +4,8 @@ node{
 		def JobName = "${JOB_NAME}"
 		def index = JobName.indexOf("/");
 		def SonarHostName = JobName.substring(0 , index)+"_"+"${BRANCH_NAME}"
-		println "${PULL_REQUEST}"
+		///Println "${PULL_REQUEST}"
+		echo sh(returnStdout: true, script: 'git branch --contains')
 		def LockVar = SonarHostName
 		if(JobName.contains('PR-'))
 		{
