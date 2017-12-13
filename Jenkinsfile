@@ -7,7 +7,7 @@ node{
 		def index = JobName.indexOf("/");
 		def SonarHostName = JobName.substring(0 , index)+"_"+"${BRANCH_NAME}"
 		//Println "${PULL_REQUEST}"
-		echo sh(returnStdout: true, script: 'git shortlog -n')
+		echo sh(returnStdout: true, script: 'git shortlog -s -n')
 		println "${env.ghprbSourceBranch}"
 		def content = readFile './.env'
   			Properties properties = new Properties()
