@@ -4,7 +4,7 @@ node{
 		def JobName = "${JOB_NAME}"
 		def index = JobName.indexOf("/");
 		def SonarHostName = JobName.substring(0 , index)+"_"+"${BRANCH_NAME}"
-		println "${ghprbSourceBranch}"
+		println "${PULL_REQUEST}"
 		def LockVar = SonarHostName
 		if(JobName.contains('PR-'))
 		{
