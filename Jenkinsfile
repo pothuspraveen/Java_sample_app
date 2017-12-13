@@ -11,7 +11,7 @@ node{
 		println "${env.ghprbSourceBranch}"
 		sh '''
     			git rev-parse --abbrev-ref HEAD > GIT_BRANCH'
-    			git_branch = readFile('GIT_BRANCH').trim()
+    			git_branch = readFile("GIT_BRANCH").trim()
     			echo git_branch
    		  '''
 		def LockVar = SonarHostName
