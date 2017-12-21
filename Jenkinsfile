@@ -33,6 +33,6 @@ node{
 		println SonarHostName
 		println JobName
 		sh '''var=${BRANCH_NAME} docker-compose up -d
-			'''*/
-	}
+			'''
+	}*/
     }
