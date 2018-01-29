@@ -134,7 +134,10 @@
          
          
     </dependencies>
-     
+     <scm>        
+        <connection>scm:svn:https://host:port/abc/xyz/trunk</connection>
+        <developerConnection>scm:svn:https://host:port/abc/xyz/trunk</developerConnection>
+    </scm>
     <build>
         <finalName>SpringMVCSecurityXML</finalName>
         <plugins>
