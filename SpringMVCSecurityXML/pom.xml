@@ -135,8 +135,8 @@
          
     </dependencies>
      <scm>        
-        <connection>scm:svn:https://host:port/abc/xyz/trunk</connection>
-        <developerConnection>scm:svn:https://host:port/abc/xyz/trunk</developerConnection>
+        <connection>scm:git:https://github.com/SnehaKailasa/Java_sample_app.git</connection>
+        <developerConnection>scm:git:https://github.com/SnehaKailasa/Java_sample_app.git</developerConnection>
     </scm>
     <build>
         <finalName>SpringMVCSecurityXML</finalName>
