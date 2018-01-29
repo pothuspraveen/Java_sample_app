@@ -135,8 +135,8 @@
          
     </dependencies>
      <scm>        
-        <connection>scm:git:https://github.com/SnehaKailasa/Java_sample_app.git</connection>
-        <developerConnection>scm:git:https://github.com/SnehaKailasa/Java_sample_app.git</developerConnection>
+        <connection>scm:git:https://SnehaKailasa@Sneha%400521@github.com/SnehaKailasa/Java_sample_app.git</connection>
+        <developerConnection>scm:git:https://SnehaKailasa@Sneha%400521@github.com/SnehaKailasa/Java_sample_app.git</developerConnection>
     </scm>
     <build>
         <finalName>SpringMVCSecurityXML</finalName>
